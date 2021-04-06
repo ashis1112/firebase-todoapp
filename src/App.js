@@ -1,6 +1,7 @@
 import {Route,Switch} from 'react-router-dom'
 import Signin from './component/auth/signin'
 import Signup from './component/auth/signup'
+import Passreset from './component/auth/passwordreset'
 import Dashboard from './component/dashboard/dashboard'
 import Navbar from './component/layout/navbar'
 import { ToastContainer} from 'react-toastify';
@@ -14,7 +15,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Dashboard} />
         <Route path='/signin' component={Signin} />
-        <Route path='/signup' component={Signup} /> 
+        <Route path='/signup' component={Signup} />
+        <Route path='/passwordreset' component={Passreset} /> 
       </Switch>
     </div>
   );

@@ -19,6 +19,12 @@ const Userreducer=(state=INITIAL_STATE,action)=>{
         case "SIGN_UP_ERR":
             toast.error("Signup Error")
             return state
+        case "RESET_PASSWORD_EMAIL_SUCCESS":
+            toast("Password Reset Email Send")
+            return state
+        case "RESET_PASSWORD_EMAIL_FAILED":
+            toast.error("Password Reset Email Not Send")
+            return state
         default:
             return state
     }

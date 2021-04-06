@@ -43,3 +43,18 @@ export const signout=()=>{
         })
     }
 }
+
+export const resetpasswordemail=(email)=>{
+    return(dispatch,getState,{getFirebase})=>{
+        const firebase=getFirebase()
+
+        firebase
+        .resetPassword(email)
+        .then(()=>{
+            dispatch({type:"RESET_PASSWORD_EMAIL_SUCCESS"})
+        })
+        .catch(()=>{
+            dispatch({type:"RESET_PASSWORD_EMAIL_FAILED"})
+        })
+    }
+}

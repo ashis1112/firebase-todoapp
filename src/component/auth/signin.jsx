@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import {signin} from '../../redux/user/useraction'
 import {connect} from 'react-redux'
-import {Redirect} from 'react-router-dom'
+import {Redirect,Link} from 'react-router-dom'
 
 class Signin extends Component{
 
@@ -37,7 +37,9 @@ class Signin extends Component{
                         <input type='password' id='password' className='form-control' onChange={this.change} />
                     </div>
                     <button className='btn btn-primary'>Signin</button>
-                    
+                    <div class="col-auto">
+                        <Link to='/passwordreset' class="form-text">Password reset</Link>
+                    </div>
                 </form>
             </div>
         )
